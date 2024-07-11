@@ -1,7 +1,8 @@
 import { star } from "../assets/icons";
-const PriceCard = ({name, imgURL, price}) => {
+const PriceCard = ({name, imgURL, price, delay}) => {
+ 
   return (
-    <div className="cursor-pointer flex flex-1 flex-col w-full max-sm:w-full">
+    <div data-aos="fade-up" data-aos-delay={delay} className="cursor-pointer flex flex-1 flex-col w-full max-sm:w-full" >
         <img 
             src={imgURL} 
             alt={name} 

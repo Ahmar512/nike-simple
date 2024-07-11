@@ -24,6 +24,24 @@
 }
 
 @layer utilities {
+  /* .xhidden{
+    opacity: 0;
+    filter:blur(5px);
+    transform:translateY(50%);
+    transition: all 1s;
+  }
+  .show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translate(0)
+  }
+  .yhidden{
+    opacity: 0;
+    filter:blur(5px);
+    transform:translateY(-100%);
+    transition: all 0.5s;
+  } */
+
   .padding {
     @apply sm:px-16 px-8 sm:py-24 py-12;
   }

@@ -34,21 +34,25 @@ export const products = [
         imgURL: shoe4,
         name: "Nike Air Jordan-01",
         price: "$200.20",
+        delay: "100"
     },
     {
         imgURL: shoe5,
         name: "Nike Air Jordan-10",
         price: "$210.20",
+        delay:"200"
     },
     {
         imgURL: shoe6,
         name: "Nike Air Jordan-100",
         price: "$220.20",
+        delay: "300"
     },
     {
         imgURL: shoe7,
         name: "Nike Air Jordan-001",
         price: "$230.20",
+        delay: "400"
     },
 ];
 
@@ -56,17 +60,20 @@ export const services = [
     {
         imgURL: truckFast,
         label: "Free shipping",
-        subtext: "Enjoy seamless shopping with our complimentary shipping service."
+        subtext: "Enjoy seamless shopping with our complimentary shipping service.",
+        anime: "fade-up-right"
     },
     {
         imgURL: shieldTick,
         label: "Secure Payment",
-        subtext: "Experience worry-free transactions with our secure payment options."
+        subtext: "Experience worry-free transactions with our secure payment options.",
+        anime: "fade-up"
     },
     {
         imgURL: support,
         label: "Love to help you",
-        subtext: "Our dedicated team is here to assist you every step of the way."
+        subtext: "Our dedicated team is here to assist you every step of the way.",
+        anime: "fade-up-left"
     },
 ];
 

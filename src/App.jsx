@@ -1,6 +1,20 @@
 import { Hero, PopularProducts, SuperQuality, Services, SpecialOffer,CustomerReviews, Subscribe,Footer } from "./sections"
 import Nav from './components/Nav';
-const App = () => (
+const App = () => {
+  // const observer = new IntersectionObserver((entries)=>{
+  //   entries.forEach((entry)=>{
+  //     console.log(entry);
+  //     if(entry.isIntersecting){
+  //       entry.target.classList.add('show');
+  //     }else{
+  //       entry.target.classList.remove('show');
+  //     }
+  //   })
+  // })
+  // const hiddenElements = document.querySelectorAll('#hidden');
+  // console.log(hiddenElements);
+  // hiddenElements.forEach((el)=> observer.observe(el));
+  return (
     <main className="relative">
       <Nav />
       <section className="xl:padding-l wide:padding-r padding-b">
@@ -28,6 +42,7 @@ const App = () => (
         <Footer />
       </section>
     </main>
-  )
+  );
+}
 
 export default App

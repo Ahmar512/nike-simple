@@ -1,7 +1,7 @@
 
-const ServiceCard = ({imgURL, label, subtext}) => {
+const ServiceCard = ({imgURL, label, subtext, anime}) => {
   return (
-    <div className="shadow-2xl px-10 py-12 rounded-xl">
+    <div data-aos={anime} data-aos-delay="200" className="shadow-2xl px-10 py-12 rounded-xl">
         <div className="bg-coral-red w-[35px] h-[35px] flex justify-center items-center rounded-full">
             <img src={imgURL} alt={label} />
         </div>
