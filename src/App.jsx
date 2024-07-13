@@ -1,5 +1,10 @@
 import { Hero, PopularProducts, SuperQuality, Services, SpecialOffer,CustomerReviews, Subscribe,Footer } from "./sections"
 import Nav from './components/Nav';
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/all';
+gsap.registerPlugin(ScrollTrigger);
+
 const App = () => {
   // const observer = new IntersectionObserver((entries)=>{
   //   entries.forEach((entry)=>{
@@ -14,6 +19,26 @@ const App = () => {
   // const hiddenElements = document.querySelectorAll('#hidden');
   // console.log(hiddenElements);
   // hiddenElements.forEach((el)=> observer.observe(el));
+
+  useGSAP(()=>{
+    const boxes = document.querySelectorAll('#box');
+    boxes.forEach((box)=>{
+      gsap.from(box ,{
+        x:-350,
+        duration:2,
+        opacity:0,
+        ease:'power3.inOut',
+        scrollTrigger:{
+          trigger:box,
+          start:'bottom bottom',
+          end: 'top 50%',
+          scrub: true,
+        }
+  
+      })
+    })
+    
+  },[]);
   return (
     <main className="relative">
       <Nav />
