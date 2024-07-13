@@ -19,14 +19,15 @@ const Nav = () => {
         }
     })
     },[]);
-    const [tap, setTap] = useState("false")
+    const [tap, setTap] = useState(false)
     const handleClick = () => {
+        console.log("clicked");
         setTap(preValue => {
             return !preValue;
         })
     }
   return (
-    <header className={`padding-x py-8 ${tap ? 'absolute': 'relative' } z-10 w-full`}>
+    <header className={`padding-x py-8 z-20 ${!tap ? 'absolute': 'relative' } z-10 w-full`}>
         <nav className='flex justify-between items-center max-container'>
             <a href="/">
                 <img src={headerLogo} alt="Logo" width={130} height={29} />
@@ -43,12 +44,12 @@ const Nav = () => {
                     </li>
                 ))}
             </ul>
-            <div className='hidden max-lg:block' onClick={handleClick}>
+            <div className='lg:hidden' onClick={handleClick}>
                 <img src={hamburger} alt="Hamburger" height={25} width={25}/>
             </div>
         </nav>
         <div>
-            <ul className={`flex-1 flex flex-col mt-5 justify-center items-center lg:hidden transition-transform gap-8 ${!tap ?null: 'hidden'}`}>
+            <ul className={`flex-1 flex flex-col mt-5 justify-center items-center lg:hidden transition-transform gap-8 ${tap ?null: 'hidden'}`}>
                     {navLinks.map((item) => (
                         <li key={item.label}>
                             <a 

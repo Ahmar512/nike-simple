@@ -4,8 +4,7 @@ import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
 gsap.registerPlugin(ScrollTrigger);
-
-const App = () => {
+const App = () => { 
   // const observer = new IntersectionObserver((entries)=>{
   //   entries.forEach((entry)=>{
   //     console.log(entry);
@@ -19,11 +18,11 @@ const App = () => {
   // const hiddenElements = document.querySelectorAll('#hidden');
   // console.log(hiddenElements);
   // hiddenElements.forEach((el)=> observer.observe(el));
-
+  
   useGSAP(()=>{
     const boxes = document.querySelectorAll('#box');
     boxes.forEach((box)=>{
-      gsap.from(box ,{
+    gsap.from(box ,{
         x:-350,
         duration:2,
         opacity:0,
@@ -34,7 +33,6 @@ const App = () => {
           end: 'top 50%',
           scrub: true,
         }
-  
       })
     })
     
